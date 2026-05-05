@@ -3,6 +3,7 @@ package com.leticiaalmeida.todolist
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -15,6 +16,7 @@ class TarefaAdapter(private val listaTarefas: List<Tarefa>) :
     class TarefaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvTitulo: TextView = view.findViewById(R.id.tvTaskTitle)
         val tvDescricao: TextView = view.findViewById(R.id.tvTaskDescription)
+        val cbStatus: CheckBox = view.findViewById(R.id.cbTaskStatus)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TarefaViewHolder {
@@ -27,6 +29,7 @@ class TarefaAdapter(private val listaTarefas: List<Tarefa>) :
         val tarefa = listaTarefas[position]
         holder.tvTitulo.text = tarefa.titulo
         holder.tvDescricao.text = tarefa.descricao
+        holder.cbStatus.isChecked = tarefa.concluida
     }
 
     override fun getItemCount(): Int = listaTarefas.size

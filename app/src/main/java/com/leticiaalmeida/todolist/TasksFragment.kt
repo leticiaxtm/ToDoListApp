@@ -31,11 +31,11 @@ class TasksFragment : Fragment() {
         
         // Criando dados fictícios para demonstração
         val tarefas = listOf(
-            Tarefa(1, "Estudar Kotlin", "Revisar conceitos de data class e fragments"),
-            Tarefa(2, "Fazer Atividade", "Implementar Bottom Navigation e RecyclerView"),
+            Tarefa(1, "Estudar Kotlin", "Revisar conceitos de data class e fragments", true),
+            Tarefa(2, "Fazer Atividade", "Implementar Bottom Navigation e RecyclerView", true),
             Tarefa(3, "Gravar Vídeo", "Explicar o projeto e demonstrar funcionamento"),
             Tarefa(4, "Enviar Trabalho", "Submeter o link do repositório/arquivo zip"),
-            Tarefa(5, "Academia", "Treino de pernas às 18h"),
+            Tarefa(5, "Academia", "Treino de pernas às 18h", true),
             Tarefa(6, "Supermercado", "Comprar leite, ovos e frutas")
         )
 
